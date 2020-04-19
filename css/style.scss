@@ -1,0 +1,76 @@
+$lt-grey: #DDD;
+$background-dark: #512DA8;
+$background-light: #9575CD;
+$background-pale: #D1C4E9;
+$text-clr: floralwhite;
+$carousel-item-height: 300px;
+
+@mixin zero-margin ($pad-up-dn: 0px, $pad-lft-rght: 0px) {
+    margin: 0px auto;
+    padding: $pad-up-dn $pad-lft-rght;
+}
+.row-header {
+    @include zero-margin();
+}
+.row-content {
+    @include zero-margin(50px, 0px);
+    border-bottom: 1px ridge;
+    min-height: 400px;
+}
+.footer {
+    background-color: #D1C4E9;
+    @include zero-margin(20px, 0px)
+}
+.jumbotron {
+    @include zero-margin(70px, 30px);
+    background-color: #9575CD !important;
+    color: floralwhite;
+}
+.address {
+    font-size: 80%;
+    margin: 0;
+    color: #0f0f0f;
+}
+body {
+    padding: 0px 0px 0px 0px;
+    z-index: 0;
+}
+.navbar-dark {
+    background-color: $background-dark !important;
+}
+.tab-content {
+    border-left: 1px solid $lt-grey;
+    border-right: 1px solid $lt-grey;
+    border-bottom: 1px solid $lt-grey;
+    padding: 10px;
+    height: 100px;
+}
+.carousel {
+    background-color: $background-dark;
+    .carousel-item {
+        height: $carousel-item-height;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-height: $carousel-item-height;
+        }
+    }
+}
+#carousel-button {
+    right: 0;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+
+.modal-header {
+    background-color: $background-dark;
+    color: $text-clr;
+    .close {
+        color: $text-clr;
+    }
+}
+.modal-body {
+    background-color: $background-pale;
+}
